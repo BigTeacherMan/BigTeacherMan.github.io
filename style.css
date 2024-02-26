@@ -1,0 +1,103 @@
+h1 {
+    font-size: 100px;
+    color:dodgerblue;
+    text-decoration: underline;
+}
+
+#background {
+    background-color: red;
+    text-align: center;
+}
+/*
+.lists {
+    display: flex;
+    justify-content: center space-between;
+    align-items: flex-end;
+
+}*/
+
+body {
+    background-image:url("images/Nike-Logo.png"), url("images/Nike-Logo.png");
+    background-repeat: repeat-y, repeat-y;
+    background-size: 350px, 350px;
+    background-attachment: fixed, fixed;
+    background-color: green;
+    background-position: center left, center right;
+}
+
+#rickandmorty {
+    border-style: groove;
+    border-width: 10px;
+    border-color: #490294;
+    border-radius: 25%;
+    padding: 25px;
+}
+
+#practice {
+    font-size: 250px;
+    margin: 0em, 5em;
+}
+
+#practice2 {
+    font-size: 24px;
+}
+
+#google:link {
+    color: orange;
+    text-decoration: none;
+}
+
+#google:visited {
+    color: green;
+}
+
+#google:hover {
+    font-size: 25px;
+    color: blue;
+    animation: youngthug 1s ease-in 0s infinite;
+}
+
+#google:active {
+    font-size: 100px;
+    color: red;
+    background-color: blueviolet;
+}
+
+@keyframes youngthug {
+    25% {
+        color: blue;
+    }
+    50% {
+        color: red;
+    }
+    75% {
+        color: yellow;
+    }
+    100%{
+        color: green;
+    }
+}
+
+#button {
+    color: skyblue;
+    background-color: antiquewhite;
+    font-size: 16px;
+    border-style: groove;
+    border-width: 3px;
+    padding: 4px;
+    box-shadow: 2px 2px 1px rgb(230, 77, 77);
+}
+
+#button:hover {
+    font-size: 20px;
+    color: darkblue;
+    background-color: plum;
+    padding: 6px;
+}
+
+#button:active {
+    font-size: 20px;
+    color: red;
+    background-color: plum;
+    padding: 7px;
+}
