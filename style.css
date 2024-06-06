@@ -1,0 +1,319 @@
+
+
+body {
+    background-image: url("images/darkgray.png"), url("images/lightblue.png"), url("images/gray.png"),
+    url("images/darkblue.png"), url("images/blue.png"), url("images/darkgray.png"), url("images/gray.png"),
+    url("images/darkgray.png"), url("images/lightblue.png"), url("images/gray.png"), url("images/blue.png"), url("images/blue.png");
+    background-repeat: no-repeat, no-repeat, no-repeat,
+    no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 20%, 20%, 30%,
+    12%, 30%, 20%, 25%,
+    20%, 25%, 20%, 25%, 15%;
+    background-position-x: 600px, 500px, 1400px,
+    670px, -100px, 1400px, 650px,
+    670px, 400px, 1600px, 900px, -100px;
+    background-position-y: 250px, 400px, 20px,
+    900px, 1100px, 1100px, 1450px,
+    2200px, 2200px, 2400px, 3000px, 2600px;
+
+    margin: 0;
+}
+
+.navbar:link {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+
+.navbar:visited {
+    color: black;
+}
+
+.navbar:hover {
+    color:#999eb4;
+    animation: scaleAnimation 1s infinite;
+}
+
+.navbar:active {
+    color: #3c5a98;
+}
+
+@keyframes scaleAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures the navigation bar is on top of other elements */
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    gap: 30px;
+    border-bottom: black 5px solid;
+    background-color: white;
+}
+
+
+#aboutmebutton {
+    grid-area: aboutmebutton;
+}
+
+#samplesbutton {
+    grid-area: samplesbutton;
+}
+
+#contactbutton {
+    grid-area: contactbutton;
+}
+
+#aboutme {
+    display: grid;
+    margin: 50px;
+    grid-template-columns:100px 3fr 3fr 100px;
+    grid-template-areas:
+        ". portrait name ."
+        ". portrait bio ."
+    ;
+    grid-gap: 50px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+#portrait {
+    width: 50vw;
+    height: 50vw;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 50%;
+    object-fit: cover;
+    grid-area: portrait;
+}
+
+#name {
+    text-align: center;
+    color: #3c5a98;
+    grid-area: name;
+    font-size: 75px;
+    margin-bottom: -50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#bio {
+    font-size: 28px;
+    grid-area: bio;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#sample_heading {
+    text-align: center;
+    color: #999eb4;
+    font-size: 75px;
+    margin-top: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.headers {
+    text-align: center;
+    color: #2d3974;
+    font-size: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#samples {
+    display: grid;
+    grid-template-columns:100px 3fr 3fr 100px;
+    grid-template-rows: 50px 150px 500px 50px 50px 150px 150px 50px;
+    grid-template-areas:
+        ". python python ."
+        ". chambers_icon chambers_name ."
+        ". chambers_image chambers_summary ."
+        ". csharp csharp ."
+        ". challenge_icon challenge_name ."
+        ". challenge_image challenge_summary ."
+    ;
+    grid-gap: 50px;
+
+}
+
+#python {
+    grid-area: python;
+    margin-bottom: -50px;
+}
+
+#chambers_icon {
+    grid-area: chambers_icon;
+    width: 700px;
+    height: 275px;
+    z-index: 1;
+}
+
+#chambers_image {
+    grid-area: chambers_image; /* Ensure the image stays in its grid area */
+    width: 720px;
+    height: 480px;
+    border-color: #070f2d;
+    border-width: 10px;
+    border-style: solid;
+    display: block; /* Ensure the image behaves as a block element */
+}
+
+#chambers_link {
+    grid-area: chambers_image; /* Use the same grid area as the image */
+    display: block;
+    text-decoration: none;
+}
+
+#chambers_link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+#chambers_name {
+    grid-area: chambers_name;
+    text-align: center;
+    color: #3c5a98;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 150px;
+}
+
+#chambers_summary {
+    grid-area: chambers_summary;
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#csharp {
+    grid-area: csharp;
+}
+
+#challenge_link {
+    grid-area: challenge_image;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#challenge_icon {
+    grid-area: challenge_icon;
+    width: 400px;
+    height: 275px;
+    z-index: 1;
+}
+
+#challenge_image {
+    grid-area: challenge_image; /* Ensure the image stays in its grid area */
+    width: 720px;
+    height: 480px;
+    border-color: #070f2d;
+    border-width: 10px;
+    border-style: solid;
+    display: block; /* Ensure the image behaves as a block element */
+}
+
+#challenge_name {
+    grid-area: challenge_name;
+    text-align: center;
+    color: #3c5a98;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 50px;
+}
+
+#challenge_summary {
+    grid-area: challenge_summary;
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.image_hover:hover {
+    border-color:#ffe100 !important;
+    border-width: 10px;
+    border-style: solid;
+    animation: scaleAnimation2 1s infinite;
+}
+
+@keyframes scaleAnimation2 {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#contact_header {
+    margin-top: 150px;
+    grid-area: contact_header;
+    text-align: center;
+}
+
+.icons {
+    height: 150px;
+    width: 150px;
+}
+
+.contacts {
+    text-align: center;
+    color: #3c5a98;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#contact {
+    display: grid;
+    margin: 50px;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+        "contact_header contact_header"
+        "email email_icon"
+        "github github_icon"
+        "phone phone_icon"
+    ;
+    grid-gap: 15px;
+}
+
+#email {
+    grid-area: email;
+    margin-left: 200px;
+}
+
+#email_icon {
+    grid-area: email_icon;
+    margin-left: 200px;
+}
+
+#github {
+    grid-area: github;
+    margin-left: 200px;
+}
+
+#github_link {
+    grid-area: github_icon;
+}
+
+#github_icon {
+    grid-area: github_icon;
+    margin-left: 200px;
+}
+
+#phone {
+    grid-area: phone;
+    margin-left: 200px;
+}
+
+#phone_icon {
+    grid-area: phone_icon;
+    margin-left: 200px;
+}
